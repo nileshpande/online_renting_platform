@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "eb9f6601-b988-4bc8-991e-0112dd7490a7",
+		"name": "online_renting_platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"np3225@gmail.com\",\n\t\"password\": \"nilesh123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3636/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwiYXJlYV9jb2RlIjoiIiwibnVtYmVyIjoiOTY3MzEyOTM5NSJ9LCJpYXQiOjE2MDkzMzk1NzQsImV4cCI6MTYwOTM0MzE3NH0.qrTKfTenGhBixBxaXPH_7KR9xhIQnpXUKS3wfWTJQyE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\": \"Akshay\",\n\t\"last_name\": \"Joshi\",\n\t\"gender\": \"male\",\n\t\"email\": \"aj@gmail.com\",\n\t\"password\": \"1234\",\n\t\"number\": \"8673129396\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3636/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwiYXJlYV9jb2RlIjoiIiwibnVtYmVyIjoiOTY3MzEyOTM5NSJ9LCJpYXQiOjE2MDkzNDUwNDAsImV4cCI6MTYwOTM0ODY0MH0.CfLeStP8JOdtjnIrkbavy5QIK1gXQLUjaUi9Y7GZMrw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3636/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwiYXJlYV9jb2RlIjoiIiwibnVtYmVyIjoiOTY3MzEyOTM5NSJ9LCJpYXQiOjE2MDkzNDUwNDAsImV4cCI6MTYwOTM0ODY0MH0.CfLeStP8JOdtjnIrkbavy5QIK1gXQLUjaUi9Y7GZMrw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3636/api/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwiYXJlYV9jb2RlIjoiIiwibnVtYmVyIjoiOTY3MzEyOTM5NSJ9LCJpYXQiOjE2MDkzNDk5MzIsImV4cCI6MTYwOTM1MzUzMn0.aFclhXk0wXqfPuqOa4cc5PxSQZZu-KrLbTV5eh2gnrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"first_name\": \"Nilesh\",\n\t\"last_name\": \"Pande\",\n\t\"gender\": \"male\",\n\t\"email\": \"np3225@gmail.com\",\n\t\"password\": \"nilesh123\",\n\t\"number\": \"2673129396\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3636/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwibnVtYmVyIjoiOTY3MzEyOTM5NiJ9LCJpYXQiOjE1OTAzNDE3OTcsImV4cCI6MTU5MDM0NTM5N30.SdYB4JJbLmW99LLwO9K8LtgyN0uEKTgEWf-PzauWNpA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3636/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwiYXJlYV9jb2RlIjoiIiwibnVtYmVyIjoiOTY3MzEyOTM5NSJ9LCJpYXQiOjE2MDkzMzk1NzQsImV4cCI6MTYwOTM0MzE3NH0.qrTKfTenGhBixBxaXPH_7KR9xhIQnpXUKS3wfWTJQyE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"item_name\": \"test fsdfsd1\",\n    \"rent_price\": 11,\n    \"manfacture_date\": \"2020-12-29T15:18:19.000Z\",\n    \"actual_cost\": 122\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3636/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwiYXJlYV9jb2RlIjoiIiwibnVtYmVyIjoiOTY3MzEyOTM5NSJ9LCJpYXQiOjE2MDkzNDMzNDksImV4cCI6MTYwOTM0Njk0OX0.iP0TdaRIExj1jEOe-qyJ4WrU6iWi827DmfYhC-c_dqY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3636/api/items",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwiYXJlYV9jb2RlIjoiIiwibnVtYmVyIjoiOTY3MzEyOTM5NSJ9LCJpYXQiOjE2MDkzNDMzNDksImV4cCI6MTYwOTM0Njk0OX0.iP0TdaRIExj1jEOe-qyJ4WrU6iWi827DmfYhC-c_dqY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"item_name\": \"test fsdfsd1\",\n    \"rent_price\": 11,\n    \"manfacture_date\": \"2020-12-29T15:18:19.000Z\",\n    \"actual_cost\": 122\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3636/api/items",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create item",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwiYXJlYV9jb2RlIjoiIiwibnVtYmVyIjoiOTY3MzEyOTM5NSJ9LCJpYXQiOjE2MDkzNDMzNDksImV4cCI6MTYwOTM0Njk0OX0.iP0TdaRIExj1jEOe-qyJ4WrU6iWi827DmfYhC-c_dqY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\":13,\n    \"item_name\": \"fridge\",\n    \"rent_price\": 11,\n    \"manfacture_date\": \"2020-12-29T09:48:19.000Z\",\n    \"actual_cost\": 122\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3636/api/items",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Items",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWQiOjEsImZpcnN0bmFtZSI6Ik5pbGVzaCIsImxhc3RuYW1lIjoiUGFuZGUiLCJnZW5kZXIiOiJtYWxlIiwiZW1haWwiOiJucDMyMjVAZ21haWwuY29tIiwiYXJlYV9jb2RlIjoiIiwibnVtYmVyIjoiOTY3MzEyOTM5NSJ9LCJpYXQiOjE2MDkzMzk1NzQsImV4cCI6MTYwOTM0MzE3NH0.qrTKfTenGhBixBxaXPH_7KR9xhIQnpXUKS3wfWTJQyE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3636/api/items/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3636",
+					"path": [
+						"api",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
